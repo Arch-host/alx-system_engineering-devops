@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -pd .[^.]*/[A-Za-z0-9]* | sort -d -t '/' -k 2 | tr '\n' ',' | sed 's/,$/\n/'
+ls -ap | sort -d -t '/' -k 2 | tr '\n' ',' | sed 's/,$/\n/'
