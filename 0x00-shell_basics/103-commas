@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap | sort -d -t '/' -k 2 | tr '\n' ',' | sed 's/,$/\n/'
+ls -ap1 | awk 'BEGIN { ORS=", " } { print } END { ORS="\n" }' | sed 's/\.$//'
